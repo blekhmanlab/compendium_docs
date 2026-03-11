@@ -1,9 +1,5 @@
-Template for the Read the Docs tutorial
-=======================================
+![Human Microbiome Compendium logo](http://blekhmanlab.org/images/compendium.png "Human Microbiome Compendium")
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+# Documentation website
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+Sphinx documentation for the [Human Microbiome Compendium](https://microbiomap.org)

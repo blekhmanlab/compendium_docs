@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Human Microbiome Compendium'
+copyright = '2026, The University of Chicago'
+author = 'Richard Abdill'
 
-release = '0.1'
-version = '0.1.0'
+release = '1.2'
+version = '1.2.0'
 
 # -- General configuration
 
@@ -20,7 +20,6 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
 }
 intersphinx_disabled_domains = ['std']
