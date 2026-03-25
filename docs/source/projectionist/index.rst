@@ -4,7 +4,9 @@ Projectionist
 
 
 .. toctree::
-  reference
+    :maxdepth: 2
+
+    reference
 
 About
 ======
@@ -17,7 +19,7 @@ Frequently Asked Questions
 
 
 .. contents::
-  :local:
+    :local:
 
 What is Projectionist?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -63,12 +65,12 @@ s125   0     0     1400  1300  300   3000
 At that point, we need to perform the `robust centered log-ratio transformation`_. This is how they define it:
 
 .. math::
-  rclr = log\frac{x}{g(x > 0)}
+    rclr = log\frac{x}{g(x > 0)}
 
 The `g` here is a value for each sample indicating the geometric mean of the read counts found in all taxa. For `s123` above would be
 
 .. math::
-  \sqrt[5]{(300 \times 150 \times 600 \times 650 \times 1300)} = 469.5092
+    \sqrt[5]{(300 \times 150 \times 600 \times 650 \times 1300)} = 469.5092
 
 This is where the controversial step comes in. Zeroes are a problem here, for both the geometric mean (which uses multiplication) and the logarithms. There are a few options to replace zeroes with other numbers, but the rCLR transformation we're going with **skips the zeroes**:
 * The geometric mean calculated for `s125` above would be `(1400*1300*300)^(1/3)`, for example.
@@ -82,11 +84,12 @@ Once each sample has its geometric mean, that number is used to "center" the dat
 .. code-block:: r
 
     gm_mean = function(x){
-      exp(mean(log(x[x > 0])))
+        exp(mean(log(x[x > 0])))
     }
 
     rclr <- function(a) {
-      answer <- log(a/gm_mean(a))
-      answer[] <- lapply(answer, function(i) if(is.numeric(i)) ifelse(is.infinite(i), 0, i) else i)
-      return(answer)
+    answer <- log(a/gm_mean(a))
+    answer[] <- lapply(answer,
+        function(i) if(is.numeric(i)) ifelse(is.infinite(i), 0, i) else i)
+        return(answer)
     }

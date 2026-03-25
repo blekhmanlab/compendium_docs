@@ -4,6 +4,8 @@ Dataset
 
 
 .. toctree::
+    :maxdepth: 2
+
     changelog
 
 The Human Microbiome Compendium is a collection of publicly available human microbiome samples, processed using a uniform pipeline. The dataset currently contains 16S rRNA gene amplicon sequencing data from human gut microbiome samples. This file describes the data in the compendium and where it came from. Data was processed as described `in our paper`_.

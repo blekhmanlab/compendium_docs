@@ -12,10 +12,9 @@ This patch adds a single file for users, `classifications.tsv`, that indicates t
 1.1.0, September 2024
 =======================
 
-This update introduces changes to multiple facets of the compendium. See the README.md for a detailed description of individual files.
+This update introduces changes to multiple facets of the compendium. See :doc:`index` for a detailed description of individual files.
 
 Administrative
------------------
 
 * `README.md` has been expanded to describe the data and its provenance.
 * `CHANGELOG.md` has been added to provide a versioned record of changes here.
