@@ -1,8 +1,12 @@
-Welcome to the documentation for the Human Microbiome Compendium!
-===================================
+============================
+Human Microbiome Compendium
+============================
 
-Description here. Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Documentation
+==============
+
+Description here. Check out the section for further information, including
+how to the project.
 
 .. note::
 
@@ -12,8 +16,7 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 5
 
-   usage
-   projectionist
-   data_files
-   changelog
+   dataset/index
+   projectionist/index
