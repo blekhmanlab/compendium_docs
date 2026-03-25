@@ -15,3 +15,5 @@ Contents
 
    usage
    projectionist
+   data_files
+   changelog
